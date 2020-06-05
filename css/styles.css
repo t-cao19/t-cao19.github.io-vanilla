@@ -1,0 +1,285 @@
+/* Colour Palette
+#102542 - Navy Blue
+#F87060 - Peach
+#FFFFE0 - Grey
+#B3A394 - Brown
+#FFFFFF - White
+#28502E - Dark Green
+#3CB371 - Medium Sea Green
+*/
+
+/* Rules are head top to bottom, so repeated rules are executed */
+
+/* Precedence from highest to lowest: ID, Class, Type Selectors */
+
+/* Global styles
+------------------------*/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: 'Noto Sans', sans-serif;
+	margin: 0;
+}
+
+h1, h2{
+	font-family: 'Handlee', cursive;
+	font-weight: 400;
+}
+
+h1{
+	font-size: 70px;
+}
+
+h2{
+	font-size: 35px;
+	margin-top: 0;
+}
+
+h3{
+	margin: 0;
+}
+
+a{
+	color:#28502E;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.content-wrap{
+	max-width: 950px;
+	margin: 0 auto;
+	padding: 60px 50px;
+	overflow: auto;
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.btn{
+	text-decoration: none;
+	background: #B3A394;
+	color: white;
+	padding: 10px;
+	display: inline-block;
+}
+
+
+/* Header and Footer
+------------------------*/
+header, footer{
+	background: #F87060;
+	color: #102542;
+}
+
+/* Header */
+header{
+	padding-top: 50px;
+	position: relative;
+}
+
+.profile-img{
+	border-radius: 50%;
+}
+
+header h1, header h2{
+	color: #102542;
+	margin: 0;
+}
+
+.download{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* Footer */
+footer{
+	text-align: center;
+}
+
+.quote p:before{
+	content: "\201C";
+}
+
+.quote p:after{
+	content: "\201D";
+}
+
+
+footer h2{
+	font-size: 40px;
+}
+
+
+.contact-info a {
+	color: #483D8B;
+	padding: 10px;
+	display: inline-block;
+	font-size: 18px;
+}
+
+/* Navigation
+------------------------*/
+nav {
+	font-family: 'Fredericka the Great', cursive;
+	text-align: center;
+	background: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+nav a {
+	display: inline-block;
+	padding: 15px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+/* Work Experience
+------------------------*/
+.work{
+	background: #CDD7D6;
+}
+
+h3 ~ p {
+	margin: 0;
+}
+]
+.job-description{
+	margin-bottom: 25px;
+}
+
+.job-description p:first-of-type{
+	margin-top: 0;
+}
+
+.job-description{
+	padding-bottom: 20px;
+	margin-bottom: 25px;
+}
+
+
+/* Education
+------------------------*/
+.education{
+	background: linear-gradient(rgba(179, 163, 148, 0.8), rgba(179, 163, 148, 0.85)), url(../images/ic-building.jpg) no-repeat fixed;
+	background-size: cover;
+	color: #00227b;
+			
+}
+
+p + h3 {
+	margin-top: 30px;
+}
+
+.acdemic-history{
+	color: #000080;
+}
+
+/* Projects
+------------------------*/
+.projects{
+	background: #9CDE9F;
+}
+
+h3 ~ p {
+	margin: 0;
+}
+
+.project-description p:first-of-type{
+	margin-top: 0;
+}
+
+.project-description{
+	padding-bottom: 20px;
+	margin-bottom: 25px;
+}
+
+
+
+/* Volunteer Experience
+------------------------*/
+.volunteer{
+	background: linear-gradient(rgba(245,255,250, 0.85), rgba(245,255,250, 0.8)), url(../images/library-project.jpg) no-repeat fixed;
+	background-size: cover;
+	color: black;
+}
+
+h3 ~ p {
+	margin: 0;
+}
+
+.volunteer-description{
+	padding-bottom: 15px;
+	margin-bottom: 25px;
+}
+
+.volunteer-description p:first-of-type{
+	margin-top: 0;
+}
+
+/* Media Queries
+------------------------*/
+@media (min-width: 900px){
+	.col-narrow{
+		width: 30%;
+		float: left;
+	}
+
+	.col-wide{
+		width: 70%;
+		float: left;
+		padding-left: 20px;
+	}
+}
+
+@media (max-width: 899px){
+	header {
+/*		padding-top: 100px;*/
+		text-align: center;
+	}
+	header h1{
+		font-size: 60px;
+	}
+	header h2{
+		font-size: 30px;
+	}
+	.profile-img {
+		width: 200px;
+	}
+	header, .work, .education, .projects, .volunteer{
+		padding-top: 75px;
+	}
+}
+
+@media (max-width: 400px){
+	header {
+		padding-top: 200px;
+		text-align: center;
+	}
+	header h1{
+		font-size: 60px;
+	}
+	header h2{
+		font-size: 30px;
+	}
+	.profile-img {
+		width: 200px;
+	}
+	.work, .education, .projects, .volunteer{
+		padding-top: 200px;
+	}
+}
+
